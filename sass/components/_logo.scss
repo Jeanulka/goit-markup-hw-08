@@ -1,0 +1,18 @@
+.logo {
+    display: block;
+
+    color: $primary-color;
+    font-family: Raleway, sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.78px;
+
+
+    &__dark-theme {
+        color: #000000;
+    }
+
+    &__white-theme {
+        color: $secondary-color;
+    }
+}
