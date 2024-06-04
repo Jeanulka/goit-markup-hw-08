@@ -2,16 +2,25 @@
 Reviews Section
 ===========================*/
 
+.reviews { 
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
+}
 
 
-.reviews__list {
-    display: flex;
-    flex-wrap: wrap;
+.reviews__list {   
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        flex-wrap: wrap;
 
     &-item:not(:nth-child(3n)) {
         width: calc((100% - 60px) / 3);
         margin-right: 30px;
     }
+    }
+  
 
     &-item {
         position: relative;

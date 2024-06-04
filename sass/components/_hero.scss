@@ -11,11 +11,13 @@
     background-size: cover;
     background-repeat: no-repeat;
 
-    padding-top: 200px;
-    padding-bottom: 200px;
-
     color: $secondary-color;
     text-align: center;
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 200px;
+        padding-bottom: 200px; 
+    }
 
 
  &__title {
@@ -24,18 +26,38 @@
     margin-bottom: 30px;
     margin-left: auto;
 
-    font-size: 44px;
     font-weight: 900;
-    line-height: 1.36;
-    letter-spacing: 2.64px;
+
+    font-size: 26px;
+    line-height: 1.61538;
+    letter-spacing: 0.06em;      
     text-transform: uppercase;
-    width: 696px;
+    text-align: center;
+
+  
+    
+  @media screen and (min-width: 1200px) {
+        font-size: 44px;    
+        line-height: 1.36;
+        letter-spacing: 2.64px;
+
+        width: 696px; 
+  }
+           
 }
 
     &__btn {
         @extend %btn;
-    padding-right: 32px;
-    padding-left: 32px;
-    border: none;
+        border: none;
+
+        padding-right: 24px;
+        padding-left: 24px;
+
+    @media screen and (min-width: 1200px) {
+        padding-right: 32px;
+        padding-left: 32px; 
 }  
+
+ 
+}
 }

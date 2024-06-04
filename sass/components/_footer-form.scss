@@ -1,0 +1,106 @@
+/*=====================================*/
+/* ФОРМА у футері*/
+/*=====================================*/
+.footer-form {
+
+    @media screen and (min-width: 1200px) {
+        width: 570px;
+        height: 86px;
+    }
+
+
+    &__title {
+        margin-bottom: 20px;
+
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+
+        color: $background-color;
+
+        @media screen and (max-width: 767px) {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__field {
+
+        display: block;
+
+
+        @media screen and (min-width: 1200px) {
+            position: relative;
+            display: inline-flex;
+            margin: 0;
+        }
+    }
+
+    &__input {
+        margin-right: 12px;
+        padding-left: 16px;
+
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+
+        height: 50px;
+
+        @media screen and (max-width: 767px) {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            width: 358px;
+        }
+
+        outline: none;
+
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+        background: rgba(33, 150, 243, 0);
+
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.25;
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.6);
+
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        right: 28px;
+        fill: $background-color;
+        transform: translateY(-50%);
+    }
+
+    &__input:focus-within,
+    &__input:focus {
+        border-color: $primary-color;
+
+        @include styled($transition-property: border-color);
+    }
+}
+
+.btn__subscribe {
+    @extend %btn;
+    position: relative;
+    display: flex;
+    width: 200px;
+
+    padding-right: 28px;
+    padding-left: 28px;
+
+    @media screen and (max-width: 767px) {
+        margin: auto;
+    }
+
+
+    &:focus,
+    &:hover {
+        border-color: $primary-color;
+        @include styled($transition-property: border-color);
+    }
+}

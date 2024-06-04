@@ -27,62 +27,150 @@
         <nav class="main-navigation">
           <!-- Header Logo -->
 
-          <a href="/" class="logo header__logo"
-            >Web<span class="logo__dark-theme">Studio</span></a
-          >
+          <div class="mobile-menu__navigation">
+            <div class="header__logo">
+              <a href="/" class="logo"
+                >Web<span class="logo__dark-theme">Studio</span></a
+              >
+            </div>
 
-          <!-- Header Menu -->
-          <ul class="main-navigation__list main-navigation__list-menu">
-            <li class="main-navigation__item">
-              <a
-                href="./index.html"
-                class="main-navigation__link main-navigation__link-menu"
-                >Студія</a
+            <!-- Mobile menu open-close button  -->
+            <button
+              type="button"
+              class="btn btn__mobile-menu is-open"
+              aria-expanded="false"
+              aria-controls="mobile-menu__container"
+              data-menu-button
+            >
+              <svg
+                width="40"
+                height="40"
+                aria-label="Кнопка перемикач мобільного
+                меню"
               >
-            </li>
-            <li class="main-navigation__item">
-              <a
-                href="./portfolio.html"
-                class="main-navigation__link main-navigation__link-menu--current-page"
-                >Портфоліо</a
-              >
-            </li>
-            <li class="main-navigation__item">
-              <a
-                href="./contacts.html"
-                class="main-navigation__link main-navigation__link-menu"
-                >Контакти</a
-              >
-            </li>
-          </ul>
+                <use
+                  class="icon-cross"
+                  href="./images/svg/symbol-defs.svg#icon-cross"
+                  width="19"
+                ></use>
+                <use
+                  class="icon-burger"
+                  href="./images/svg/symbol-defs.svg#icon-burger"
+                  width="24"
+                ></use>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Mobile menu -->
+          <div
+            class="mobile-menu__container is-open"
+            id="mobile-menu__container"
+            data-menu
+          >
+            <!-- Menu navigation list -->
+            <ul class="main-navigation__list main-navigation__list-menu">
+              <li class="main-navigation__item">
+                <a
+                  href="./index.html"
+                  class="main-navigation__link main-navigation__link-menu"
+                  >Студія</a
+                >
+              </li>
+              <li class="main-navigation__item">
+                <a
+                  href="./portfolio.html"
+                  class="main-navigation__link main-navigation__link-menu--current-page"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="main-navigation__item">
+                <a
+                  href="./contacts.html"
+                  class="main-navigation__link main-navigation__link-menu"
+                  >Контакти</a
+                >
+              </li>
+            </ul>
+            <!-- Menu navigation Contacts -->
+            <ul class="main-navigation__list main-navigation__list-contact">
+              <li class="main-navigation__item mail">
+                <a
+                  class="main-navigation__link main-navigation__link-contact"
+                  href="mailto:info@devstudio.com"
+                  aria-label="Електронна пошта"
+                >
+                  <svg class="main-navigation__icon" width="16" height="12">
+                    <use
+                      href="./images/svg/symbol-defs.svg#icon-envelope"
+                    ></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="main-navigation__item phone">
+                <a
+                  class="main-navigation__link main-navigation__link-contact"
+                  href="tel:+380961111111"
+                  aria-label="Номер телефону"
+                >
+                  <svg class="main-navigation__icon" width="10" height="16">
+                    <use
+                      href="./images/svg/symbol-defs.svg#icon-smartphone"
+                    ></use>
+                  </svg>
+                  +380961111111
+                </a>
+              </li>
+            </ul>
+            <!-- Menu navigation Social -->
+            <ul class="menu__social">
+              <li class="menu__social-item">
+                <a
+                  class="menu__social-link"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  aria-label="Посилання на інстаграм"
+                  >Instagram
+                </a>
+              </li>
+              <li class="menu__social-item">
+                <a
+                  class="menu__social-link"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  aria-label="Посилання на твітер"
+                >
+                  Twitter
+                </a>
+              </li>
+
+              <li class="menu__social-item">
+                <a
+                  class="menu__social-link"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  aria-label="Посилання на фейсбук"
+                >
+                  Facebook
+                </a>
+              </li>
+              <li class="menu__social-item">
+                <a
+                  class="menu__social-link"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  aria-label="Посиалння на лінкедін"
+                  >LinkedIn
+                </a>
+              </li>
+            </ul>
+          </div>
         </nav>
-        <!-- Header Contacts -->
-        <ul class="main-navigation__list main-navigation__list-contact">
-          <li class="main-navigation__item">
-            <a
-              class="main-navigation__link main-navigation__link-contact"
-              href="mailto:info@devstudio.com"
-              aria-label="Електронна пошта"
-            >
-              <svg class="main-navigation__icon" width="16" height="12">
-                <use href="./images/svg/symbol-defs.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="main-navigation__item">
-            <a
-              class="main-navigation__link main-navigation__link-contact"
-              href="tel:+380961111111"
-              aria-label="Номер телефону"
-            >
-              <svg class="main-navigation__icon" width="10" height="16">
-                <use href="./images/svg/symbol-defs.svg#icon-smartphone"></use>
-              </svg>
-              +380961111111
-            </a>
-          </li>
-        </ul>
       </div>
     </header>
 
@@ -93,31 +181,36 @@
 
           <!-- Portfolio filter -->
           <ul class="portfolio__button-list">
-            <li class="portfolio__filter-item">
-              <button class="btn portfolio__filter-button" type="button">
-                Усі
-              </button>
-            </li>
-            <li class="portfolio__filter-item">
-              <button class="btn portfolio__filter-button" type="button">
-                Веб-сайти
-              </button>
-            </li>
-            <li class="portfolio__filter-item">
-              <button class="btn portfolio__filter-button" type="button">
-                Додатки
-              </button>
-            </li>
-            <li class="portfolio__filter-item">
-              <button class="btn portfolio__filter-button" type="button">
-                Дизайн
-              </button>
-            </li>
-            <li class="portfolio__filter-item">
-              <button class="btn portfolio__filter-button" type="button">
-                Маркетинг
-              </button>
-            </li>
+            <div class="portfolio__button-list-first">
+              <li class="portfolio__filter-item">
+                <button class="btn portfolio__filter-button" type="button">
+                  Усі
+                </button>
+              </li>
+              <li class="portfolio__filter-item">
+                <button class="btn portfolio__filter-button" type="button">
+                  Веб-сайти
+                </button>
+              </li>
+              <li class="portfolio__filter-item">
+                <button class="btn portfolio__filter-button" type="button">
+                  Додатки
+                </button>
+              </li>
+            </div>
+
+            <div class="portfolio__button-list-second">
+              <li class="portfolio__filter-item">
+                <button class="btn portfolio__filter-button" type="button">
+                  Дизайн
+                </button>
+              </li>
+              <li class="portfolio__filter-item">
+                <button class="btn portfolio__filter-button" type="button">
+                  Маркетинг
+                </button>
+              </li>
+            </div>
           </ul>
 
           <!-- Portfolio examples -->
@@ -270,7 +363,7 @@
               >
                 <div class="portfolio__overlay">
                   <img
-                    class="portfolio-pic"
+                    class="portfolio__pic"
                     src="./images/portfolio/monitor.jpg"
                     alt="Монітор"
                     width="370"
@@ -358,7 +451,7 @@
                 <div class="portfolio__overlay">
                   <img
                     class="portfolio__pic"
-                    src="./images/portfolio/lab.jpg"
+                    src="./images/portfolio/business.jpg"
                     alt="Бейджик проекту"
                     width="370"
                     height="294"
@@ -483,5 +576,8 @@
         </form>
       </div>
     </footer>
+
+    <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

@@ -3,20 +3,44 @@ portfilio examples - cards style
 ========================================*/
 
 .portfilio__examples-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: -30px;
+
+    @media screen and (max-width: 767px) {
+        padding-left: 15px;
+        padding-right: 15px;
+        }
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: -30px;
+    }
+
 }
 
 .portfolio__item {
-    width: calc((100% - 60px) / 3);
-    margin-bottom: 30px;
-
     position: relative;
 
-    &:not(:nth-child(3n)) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+        }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        width: calc((100% - 60px) / 2);
+        margin-bottom: 30px;
+        
+        &:not(:nth-child(2n)) {
+        margin-right: 30px;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: calc((100% - 60px) / 3);
+        margin-bottom: 30px;
+
+        &:not(:nth-child(3n)) {
         margin-right: 30px;
     }
+}
 }
 
 .portfolio__link {
@@ -28,6 +52,13 @@ portfilio examples - cards style
     &:hover,
     &:focus {
         box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+    }
+}
+
+.portfolio__pic {
+    @media screen and (max-width: 767px) {
+        width: 100%;
+        max-width: 450px;
     }
 }
 

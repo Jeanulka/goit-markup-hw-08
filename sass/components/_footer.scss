@@ -7,30 +7,44 @@
     padding-bottom: 60px;
 
     &__container {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: baseline;
-        justify-content: space-between;
+
+        @media screen and (min-width: 1200px) {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            justify-content: space-between;
+        }
+    
     }
 
    &__logo {
         margin-bottom: 20px;
+
+        @media  screen and (max-width: 767px) {
+            text-align: center;
+        }
     }
 
     &__contact {
         font-style: normal;
         line-height: 1.71;
         letter-spacing: 0.42px;
+
+        @media screen and (max-width: 767px) {
+                text-align: center;
+                margin-bottom: 60px;
+            }
     }
 
     &__contact-text {
         margin-bottom: 9px;
-        color: $secondary-color;
+        color: $secondary-color;       
     }
 
     &__contact-item:not(:last-child) {
         margin-bottom: 9px;
     }
+
     & .social-link__icon {
         fill: $secondary-color;
     }
@@ -56,10 +70,21 @@
     line-height: 1.2;
     letter-spacing: 0.42px;
     text-transform: uppercase;
+
+    @media screen and (max-width: 767px) {
+            text-align: center;        
+            letter-spacing: 0.03em;
+            margin-bottom: 20px;           
+        }
 }
 
 .social {
-    display: flex;
+   display: flex; 
+
+    @media screen and (max-width: 767px) {
+        justify-content: center; 
+        margin-bottom: 60px;
+}
 }
 
 .social__item:not(:last-child) {

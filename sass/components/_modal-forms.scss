@@ -7,7 +7,7 @@
     top: 0;
     left: 0;
     z-index: 10;
-
+   
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
@@ -16,26 +16,58 @@
    
     @include styled(opacity);
     @include styled(visibility);
+
+
+    @media screen and (max-width: 767px) {
+        padding-top: 93px;
+        padding-right: 15px;
+        padding-bottom: 93px;
+        padding-left: 15px;
+    }
+
+    @media screen and (max-width: 1199px)    {
+        overflow-y: scroll;
+    }
 }
    
 
 .backdrop.is-hidden {
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
-        }
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+}
 
 
-.modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
+.modal {  
+    // position: relative;
     padding: 40px;
-
     border-radius: 4px;
-    width: 528px;
-    height: 581px;
+
+    width: 100%;
+    height: 609px;
+
+    @media screen and (min-width: 480px)and (max-width: 1199px) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        max-width: 450px;
+        height: 609px;
+
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    @media screen and (min-width: 1199px) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        width: 528px;
+        height: 581px;
+
+        transform: translate(-50%, -50%) scale(1);
+    }
+
 
     background-color: $background-color;
     color: #000000;
@@ -43,7 +75,7 @@
     box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
     background: $background-color;
 
-    transform: translate(-50%, -50%) scale(1);
+   
 
     @include styled(transform);
 }
@@ -57,8 +89,14 @@
 /* ФОРМА */
 /*=====================================*/
 .form {
-    width: 448px;
-    height: 501px;
+    @media screen and (max-width: 767px) {
+        position: relative;
+    }
+  
+    @media screen and (min-width: 1199px) {
+            width: 448px;
+            height: 501px
+        }
 }
 
 .form__title {
@@ -77,9 +115,14 @@
     flex-wrap: wrap;
     align-content: center;
 
-    width: 448px;
+    width: 100%;
 
     margin-bottom: 10px;
+
+
+    @media screen and (min-width: 1199px) {
+            width: 448px;
+        }
 
     &__label {
         margin-bottom: 4px;
@@ -141,10 +184,15 @@
 
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    width: 448px;
+
+    width: 100%;
     height: 120px;
 
     outline: none;
+
+    @media screen and (min-width: 1199px) {
+            width: 448px;
+        }
 
 .form-group__comment:focus-within>&,
 .form-group__comment:focus>& {
@@ -159,13 +207,21 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
-
-    width: 423px;
+    
+    width: 100%;   
     height: 24px;
 
+    font-weight: 400;
+    font-size: 12px;
     line-height: 1.71429;
     letter-spacing: 0.03em;
-    color: #757575;
+    color: $text-color;
+
+    @media screen and (min-width: 1199px) {
+        width: 423px;  
+        font-size: 14px; 
+    }
+        
 }
 
 .checkbox__input {
@@ -216,11 +272,13 @@
 .checkbox__input {
     margin-left: 7px;
 
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71429;
-    letter-spacing: 0.03em;
-    color: $text-color;
+    // font-weight: 400;
+    // font-size: 12px;
+    // line-height: 1.71429;
+    // letter-spacing: 0.03em;
+    // color: $text-color;
+
+  
 }
 
 .checkbox__link-agreement {
@@ -259,6 +317,11 @@
     border-width: 1px;
     background-color: $background-color;
 
+    @media screen and (max-width: 767px) {
+        top: -30px;
+        right: -30px;
+       }
+
     &:hover,
     &:focus {
         cursor: pointer;
@@ -271,82 +334,6 @@
         
     }
 }
-/* -------------------------------------------------------------------------------------------- */
+/* --------------------------------------------------- */
 
-/*=====================================*/
-/* ФОРМА у футері*/
-/*=====================================*/
-.footer-form {
-    width: 570px;
-    height: 86px;
-
-    &__title {
-        margin-bottom: 20px;
-
-        font-weight: 700;
-        font-size: 14px;
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
-
-        color: $background-color;
-    }
-
-    &__field {
-        position: relative;
-        display: inline-flex;
-        margin: 0;
-    }
-
-    &__input {
-        margin-right: 12px;
-        padding-left: 16px;
-
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        border-radius: 4px;
-        width: 358px;
-        height: 50px;
-
-        outline: none;
-
-        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-        background: rgba(33, 150, 243, 0);
-
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 1.25;
-        letter-spacing: 0.03em;
-        color: rgba(255, 255, 255, 0.6);
-    }
-
-    &__icon {
-        position: absolute;
-        top: 50%;
-        right: 28px;
-        fill: $background-color;
-        transform: translateY(-50%);
-}
-    
-    &__input:focus-within,
-    &__input:focus {
-        border-color: $primary-color;
-        
-        @include styled($transition-property: border-color);
-    }
-}
-
-.btn__subscribe {
-    @extend %btn;
-    position: relative;
-    display: flex;
-    width: 200px;
-
-    padding-right: 28px;
-    padding-left: 28px;
-
-    &:focus,
-    &:hover {
-        border-color: $primary-color;
-        @include styled($transition-property: border-color);
-    }
-}
 
